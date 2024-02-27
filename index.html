@@ -4,6 +4,8 @@
     <style>
         .grid-container {
             display: grid;
+            grid-template-columns: repeat(4,1fr);
+            gap: 1.5rem;
         }
         .yellownote {
             background-color: yellow;
@@ -11,7 +13,6 @@
             height: 150px;
             border: 1px solid black;
             box-sizing: border-box;
-            margin: 30px;
         }
         .rednote {
             background-color: red;
@@ -19,8 +20,6 @@
             height: 150px;
             border: 1px solid black;
             box-sizing: border-box;
-            margin: 30px;
-
         }
         .orangenote {
             background-color: orange;
@@ -28,15 +27,23 @@
             height: 150px;
             border: 1px solid black;
             box-sizing: border-box;
-            margin: 30px;
-
         }
     </style>
-<title>Dennis' experiments with HTML, CSS, and Javascript</title>
+    <script>
+        const yellowbox = document.getElementById("yellowbox")
+        yellowbox.addEventListener(
+  "click",
+  (ev) => {
+    yellowbox.style.backgroundColor = "blue";
+  }
+
+);
+    </script>
+<title>Dennis experiments with HTML, CSS, and Javascript</title>
 </head>
 <body>
 
-<h1>Dennis says that this is a Heading</h1>
+<h1>Dennis experiments with HTML, CSS, and Javascript</h1>
 <p>This is a paragraph.</p>
 <div class="grid-container">
 <div class="yellownote"> </div>
