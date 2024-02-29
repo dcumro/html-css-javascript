@@ -7,21 +7,21 @@
             grid-template-columns: repeat(4,1fr);
             gap: 1.5rem;
         }
-        .yellownote {
+        #yellownote {
             background-color: yellow;
             width: 200px;
             height: 150px;
             border: 1px solid black;
             box-sizing: border-box;
         }
-        .rednote {
+        #rednote {
             background-color: red;
             width: 200px;
             height: 150px;
             border: 1px solid black;
             box-sizing: border-box;
         }
-        .orangenote {
+        #orangenote {
             background-color: orange;
             width: 200px;
             height: 150px;
@@ -29,27 +29,41 @@
             box-sizing: border-box;
         }
     </style>
-    <script>
-        const yellowbox = document.getElementById("yellowbox")
-        yellowbox.addEventListener(
-  "click",
-  (ev) => {
-    yellowbox.style.backgroundColor = "blue";
-  }
 
-);
-    </script>
 <title>Dennis experiments with HTML, CSS, and Javascript</title>
 </head>
 <body>
 
 <h1>Dennis experiments with HTML, CSS, and Javascript</h1>
-<p>This is a paragraph.</p>
+<p>Click on the yellow box to change its color to blue</p>
 <div class="grid-container">
-<div class="yellownote"> </div>
-<div class="rednote"> </div>
-<div class="orangenote"> </div>
+<div id="yellownote"> </div>
+<div id="rednote"> </div>
+<div id="orangenote"> </div>
 </div>
+<script>
+    myyellownote = document.getElementById("yellownote");
+    //alert("myyellownote=" + myyellownote);
+        yellownote.addEventListener(
+  "click",
+  (ev) => {
+    myyellownote.style.backgroundColor = "blue";
+  }
 
+ );
+// document.getElementById("yellownote").addEventListener(
+//     'click', function() {
+//         alert("someone click yellowbox");
+//     }
+// )
+// document.body.addEventListener('click', function() {
+//     alert("someone clicked the body");
+// });
+
+// myyellowbox.addEventListener('click', function() {
+// // specify the action to take when the div is clicked
+// console.log('Div was clicked!');
+// });
+</script>
 </body>
 </html>
